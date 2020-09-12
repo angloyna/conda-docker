@@ -17,11 +17,9 @@ jobs:
           context: ./condatest/linux-64-python3.7
           file: ./Dockerfile
           tags: angloyna/linux-64-python3.7:ghaction
-          tags: ghaction
       - name: build-push linux-ci
         uses: docker/build-push-action@v2
         with:
           context: ./condatest/linux-64-python2.7
           file: ./Dockerfile
           tags: angloyna/linux-64-python2.7:ghaction
-          tags: ghaction
