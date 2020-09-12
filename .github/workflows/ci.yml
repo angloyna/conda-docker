@@ -12,7 +12,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: build-push linux-ci
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           context: ./condatest/linux-64-python3.7
           file: ./Dockerfile
@@ -21,7 +21,7 @@ jobs:
           repository: angloyna/linux-64-python3.7
           tags: ghaction
       - name: build-push linux-ci
-        uses: docker/build-push-action@v1
+        uses: docker/build-push-action@v2
         with:
           context: ./condatest/linux-64-python2.7
           file: ./Dockerfile
